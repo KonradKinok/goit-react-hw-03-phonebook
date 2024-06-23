@@ -65,8 +65,8 @@ export default class ContactForm extends Component {
                         type="tel"
                         name="number"
                         // pattern="((\+|00)?[1-9]{2}|0)[1-9]( ?[0-9]){8}"
-                        placeholder="567-21-45"
-                        pattern="\d\d\d-\d\d-\d\d"
+                        placeholder="567-215-453"
+                        pattern="\d\d\d-\d\d\d-\d\d\d"
                         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with + Example: 567-21-45"
                         required
                         value={this.state.number}
