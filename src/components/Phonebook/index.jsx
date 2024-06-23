@@ -87,32 +87,3 @@ export class Contacts extends Component {
         )
     }
 }
-
-
-
-const localStorageKey = 'Phonebook-local-storage';
-//Load LocalStorage Data
-function load(key) {
-    try {
-        const serializedState = localStorage.getItem(key);
-        return serializedState === null ? undefined : JSON.parse(serializedState);
-    } catch (error) {
-        console.error('Get state error: ', error.message);
-    }
-}
-
-//Save LocalStorage Data
-function save(key, value) {
-    try {
-        const serializedState = JSON.stringify(value);
-        localStorage.setItem(key, serializedState);
-    } catch (error) {
-        console.error('Set state error: ', error.message);
-    }
-}
-const contacts = [{ id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
-{ id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
-{ id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
-{ id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
-{ id: 'id-5', name: 'Konrad', number: '2' },]
-// save(localStorageKey, contacts) 
