@@ -50,20 +50,19 @@ export class Contacts extends Component {
     addContact = (contact) => {
         this.setState((prevState) => {
             const updatedContacts = [...prevState.contacts, contact];
-            this.saveLocalStorage(localStorageKey, updatedContacts);
+            this.saveLocalStorage(this.localStorageKey, updatedContacts);
             return { contacts: updatedContacts };
 
         });
 
     };
 
-
     handleDelete = (contactId) => {
         this.setState((prevState) => {
             const updatedContacts = prevState.contacts.filter(
                 (contact) => contact.id !== contactId,
             );
-            this.saveLocalStorage(localStorageKey, updatedContacts);
+            this.saveLocalStorage(this.localStorageKey, updatedContacts);
             return { contacts: updatedContacts };
         });
     };
